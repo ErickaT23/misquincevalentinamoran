@@ -208,6 +208,7 @@
     font-family: var(--font-body);
     transition: background 0.3s;
     font-style: italic;
+    margin-bottom: 20px;
   }
   button:hover {
     background: var(--text-color);
@@ -332,8 +333,13 @@
   }
   /* ITINERARIO */
   #itinerary-section {
-    background: transparent;
-    border-radius: 10px;
+    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
   }
   #itinerary-section h2{
     font-size: var(--font-size-title-small);
@@ -359,8 +365,13 @@
   }
   /* LLUVIA DE SOBRES */
   #gift-section {
-    background: transparent;
-    border-radius: 10px;
+    background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
   }
   #gift-section h2 {
     font-size: var(--font-size-title-small);
@@ -378,51 +389,15 @@
     text-align: center;
     padding: 30px 20px;
   }
-  .bank-toggle {
-    font-size: var(--font-size-text);
-    padding: 12px 24px;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: var(--shadow);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    transition: background 0.3s;
-    font-family: var(--font-body);
-    margin: 10px auto;
-  }
-  .bank-toggle:hover {
-    background-color: var(--text-color);
-  }
-  .bank-details {
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    background-color: rgba(255,255,255,0.9);
-    border-radius: 10px;
-    padding: 0 15px;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  .bank-details.open {
-    max-height: 300px; /* ajusta según el contenido */
-    opacity: 1;
-    padding: 15px;
-  }
-  .bank-details p {
-    margin: 6px 0;
-    font-size: 1rem;
-    color: var(--text-color);
-    font-size: var(--font-size-text);
-  }
   /* PLAYLIST */
   #playlist-section {
-    background: transparent;
-    border-radius: 10px;
+    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;;
   }
   #playlist-section img {
     width: 100%;
@@ -443,8 +418,13 @@
   }
   /* DRESS CODE */
   #dresscode-section {
-    background: transparent;
-    border-radius: 10px;
+    background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
   }
   #dresscode-section h2{
     font-size: var(--font-size-title-small);
@@ -465,8 +445,13 @@
   }
   /* GALERÍA */
   #gallery-section {
-    background: transparent;
-    border-radius: 10px;
+    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
   }
   #gallery-section h2{
     font-size: var(--font-size-title-small);
@@ -522,10 +507,13 @@
 }
   /* BUENOS DESEOS */
   #wishes-section {
-    background-image: url(/images/82.png);
-    background-repeat: no-repeat;
+    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
-    background-position: top center;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
   }
   #wishes-section h2{
     font-size: var(--font-size-title-small);
@@ -534,9 +522,10 @@
     font-size: var(--font-size-text);
   }  
   #show-wishes button {
-    margin-top: 10px;
+    margin-top: 20px;
     font-family: var(--font-body);
     font-size: var(--font-size-text);
+    margin-bottom: 20px;
   }
   #wish-form {
     max-width: 600px;
@@ -586,21 +575,15 @@
     background-color: var(--text-color);
   }
   
-  /* NO NIÑOS */
-  #no-children-section {
-    background: transparent;
-    border-radius: 10px;
-  }
-  #no-children-section h2{
-    font-size: var(--font-size-title-small);
-  }
-  #no-children-section p{
-    font-size: var(--font-size-text);
-  }
   /* ÁLBUM */
   #album-section {
-    background-color: #fbf5ef;
-    border-radius: 10px;
+    background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
   }
   #album-section h2{
     font-size: var(--font-size-title-small);
@@ -640,8 +623,13 @@
   }
   /* CONFIRMACIÓN */
   #rsvp-section {
-    background: transparent;
-    border-radius: 10px;
+    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
   }
   #rsvp-section h2{
     font-size: var(--font-size-title-small);
@@ -667,8 +655,13 @@
   
   /* FRASE FINAL */
   #final-message-section {
-    background-color: #fbf5ef;
-    margin-top: -10px;
+    background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-color);
+    padding: 40px;
   }
   #final-message-section p{
     font-size: var(--font-size-subtitle);
@@ -676,7 +669,7 @@
   
   /* FOOTER */
   footer {
-    background: var(--text-color);
+    background: rgb(255, 239, 254);
     color: white;
     padding: 20px;
     text-align: center;
@@ -694,7 +687,7 @@
   }
 
   #footer {
-    background-color: #635448;
+    background-color:rgb(203, 182, 202);
     color: white;
     text-align: center;
     padding: 20px 0;

@@ -113,42 +113,6 @@ document.getElementById('dresscode-inspo').innerHTML = `
 `;
 
 
-  // --- Galería de fotos ---
-  const galleryContainer = document.getElementById('gallery-container');
-  eventData.gallery.forEach(image => {
-    const img = document.createElement('img');
-    img.src = image;
-    img.alt = "Foto galería";
-    img.loading = "lazy"; // 👈 Aquí usas lazy loading
-    galleryContainer.appendChild(img);
-  });
-
-  // Modal de galería
-const modal = document.getElementById('gallery-modal');
-const modalImage = document.getElementById('modal-image');
-const modalClose = document.getElementById('modal-close');
-
-// Detectar clic en cualquier imagen de la galería
-document.querySelectorAll('#gallery-container img').forEach(img => {
-  img.addEventListener('click', () => {
-    modalImage.src = img.src;
-    modal.classList.remove('hidden');
-  });
-});
-
-// Cerrar modal al hacer clic en la X
-modalClose.addEventListener('click', () => {
-  modal.classList.add('hidden');
-});
-
-// También cerrar al hacer clic fuera de la imagen
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.add('hidden');
-  }
-});
-
-
   // --- Álbum (QR + link) ---
   document.getElementById('qr-album').src = eventData.album.qrImage;
   document.getElementById('upload-photos').href = eventData.album.uploadLink;
@@ -196,18 +160,13 @@ document.getElementById('show-wishes').addEventListener('click', () => {
 });
 
 
-  // --- No niños ---
-  document.getElementById('no-kids-policy').innerText = eventData.noKidsPolicy;
-
   // --- Final: Foto y Frase ---
-  document.getElementById('final-photo').src = eventData.finalPhoto;
   document.getElementById('final-message').innerText = eventData.finalMessage;
 
   // --- Confirmaciones ---
   document.getElementById('rsvp-image').src = eventData.rsvp.rsvpImage;
-  document.getElementById('rsvp-message').innerText = "Para nosotros es muy importante que confirmes tu asistencia antes del 01 de Junio, o bien indicarnos si no podrás acompañarnos.";
+  document.getElementById('rsvp-message').innerText = "Para nosotros es muy importante que confirmes tu asistencia antes del 01 de diciembre, o bien indicarnos si no podrás acompañarnos.";
   document.getElementById('whatsapp-confirm').onclick = () => window.open(eventData.rsvp.whatsapp, '_blank');
-  document.getElementById('email-confirm').onclick = () => window.open(eventData.rsvp.email, '_blank');
 
   // --- Footer (redes sociales) ---
   const socialIcons = document.getElementById('social-icons');
