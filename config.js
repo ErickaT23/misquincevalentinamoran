@@ -48,7 +48,7 @@ export const eventData = {
     finalMessage: "¡Gracias por ser parte de este día tan especial!",
     rsvp: {
       rsvpImage: "/images/rsvp.svg",
-      whatsapp: "https://wa.me/50236011737?text=Confirmo%20mi%20asistencia%20a%20los%20quince%20de%20Valentina%20Morán%20Lira",
+      whatsapp: "https://wa.me/50259684301?text=Confirmo%20mi%20asistencia%20a%20los%20quince%20de%20Valentina%20Morán%20Lira",
     },
     footer: {
       social: {
