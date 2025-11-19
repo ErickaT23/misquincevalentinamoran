@@ -3,13 +3,13 @@ import { eventData } from './config.js';
 document.addEventListener('DOMContentLoaded', () => {
 
   // --- Apertura del sobre ---
-  const seal = document.getElementById('seal');
+  const envelopeimage = document.getElementById('envelopeimage');
   const envelope = document.getElementById('envelope');
   const mainContent = document.querySelector('.main-content');
   const audioPlayer = document.getElementById('audioPlayer');
   const playPauseButton = document.getElementById('playPauseButton');
 
-  seal.addEventListener('click', () => {
+  envelopeimage.addEventListener('click', () => {
     envelope.classList.add('open');
     setTimeout(() => {
       envelope.style.display = 'none';
@@ -19,11 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
   });
 
-  // --- Cargar datos generales ---
-  document.getElementById('couple-names').innerText = eventData.couple.names;
-  document.getElementById('couple-last').innerText = eventData.couple.last;
-  document.getElementById('wedding-date').innerText = eventData.couple.date;
-  document.getElementById('hero-image').src = eventData.couple.heroImage;
+  // Cargar datos generales del hero
+document.getElementById('couple-names').innerText = eventData.couple.names;
+document.getElementById('couple-last').innerText = eventData.couple.last;
+
 
   // --- Música ---
   audioPlayer.src = eventData.song.file;
@@ -237,6 +236,6 @@ function addToCalendar() {
     window.open(googleCalendarUrl, '_blank');
   }
   
-  //OPTIMIZAR
+
 
   

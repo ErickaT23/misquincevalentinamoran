@@ -11,9 +11,9 @@
     --accent-color: #d57d8d;
     
     /* Tipografías */
-    --font-title:"Great Vibes", cursive;
-    --font-subtitle: "Luxurious Script", cursive;
-    --font-body: "PT Serif", serif;
+    --font-title: "Allura", cursive;
+    --font-subtitle: "Cinzel", serif;
+    --font-body: "Nunito Sans", sans-serif;
     
     /* Tamaños de letra */
     --font-size-title: 3rem;
@@ -65,63 +65,77 @@
   }
 
   /* SOBRE */
+/* Nuevo sobre estático */
 #envelope {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--background-color);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 0;
-  }
-  #envelope-top, #envelope-bottom {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: transform 1s ease;
-  }
-  #envelope-top {
-    background-image: url('/images/enve-ar.svg'); /* Usa tu imagen */
-    background-position: top center;
-  }
-  #envelope-bottom {
-    background-image: url('/images/enve-ab.svg'); /* Usa tu imagen */
-    background-position: bottom center;
-  }
-  #seal {
-    position: absolute;
-    width: 175px;
-    height: 175px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: var(--shadow);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-title);
-    font-size: 2rem;
-    color: var(--text-color);
-    cursor: pointer;
-    z-index: 2;
-  }
-  #seal h2{
-    margin: 0;
-    font-size: 2rem;
-  }
-  /* Estado de apertura */
-  .open #envelope-top {
-    transform: translateY(-100%);
-  }
-  .open #envelope-bottom {
-    transform: translateY(100%);
-  }
+  background-image: url(/images/Fs.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* O cover según prefieras */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.envelope-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.envelope-title {
+  font-family: var(--font-title);
+  font-size: 2.3rem;
+  background: linear-gradient(90deg, #b76e79, #f7c6c7, #e9c0ca, #b76e79);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  padding: 15px;
+  margin-bottom: -20px;
+}
+
+.envelope-subtitle {
+  font-family: var(--font-title);
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #b76e79, #f7c6c7, #e9c0ca, #b76e79);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  padding: 15px;
+}
+
+#envelopeimage {
+  width: 370px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#envelopeimage:hover {
+  transform: scale(1.05);
+}
+
+.envelope-hint {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1rem;
+  background-color: rgba(249, 213, 211, 0.3); /* rosado suave */
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
   /* Ocultar cuando abre */
   .hidden {
     display: none !important;
@@ -129,35 +143,76 @@
   /* HERO (Foto inicial) */
   #hero {
     position: relative;
+    height:60vh;
   }
   #hero img {
     width: 100%;
     height: auto;
     display: block;
-  }
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: transparent;
-    width: 300px;
-    height: auto;
-  }
-  .hero-text h1 {
-    margin-top: -250px;
-    font-size: 2rem;
-  }
-  .hero-text h3{
-    font-size: 2.3rem;
-  }
-  .hero-text h2{
-    margin-top: -5px;
-  }
+    margin-top: -100px;
+  } 
+#hero {
+  background-image: url('/images/FF.svg'); /* Imagen personalizada */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.hero-text-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text-centered h1 {
+  margin-top: 0;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #b76e79, #f7c6c7, #e9c0ca, #b76e79);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: var(--font-title);
+  padding: 15px;
+  margin-bottom: -20px;
+  margin-top: 80px;
+}
+
+.hero-text-centered h3 {
+  margin-top: 0;
+  font-size: 3.2rem;
+  background: linear-gradient(90deg, #b76e79, #f7c6c7, #e9c0ca, #b76e79);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: var(--font-title);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.guest-info {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #b76e79;
+}
+
+.guest-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #555;
+  max-width: 400px;
+  padding: 10px;
+}
+
   /* SECCIÓN MÚSICA */
   /* SECCIÓN INTRO (invitación, música, contador y bendición) */
 #intro-section {
-  background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+  background-image: url('/images/f2.svg'); /* Cambia la ruta según tu imagen */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -314,7 +369,7 @@
   }
   #parents-blessing p{
     font-family: var(--font-body);
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--text-color);
     max-width: 600px;
     margin-bottom: 30px;
@@ -333,7 +388,7 @@
   }
   /* ITINERARIO */
   #itinerary-section {
-    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
+    background-image: url('/images/f1.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -365,7 +420,7 @@
   }
   /* LLUVIA DE SOBRES */
   #gift-section {
-    background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+    background-image: url('/images/f2.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -391,7 +446,7 @@
   }
   /* PLAYLIST */
   #playlist-section {
-    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
+    background-image: url('/images/f1.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -418,7 +473,7 @@
   }
   /* DRESS CODE */
   #dresscode-section {
-    background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+    background-image: url('/images/f2.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -443,71 +498,12 @@
     font-family: var(--font-body);
     font-size: var(--font-size-text);
   }
-  /* GALERÍA */
-  #gallery-section {
-    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    color: var(--text-color);
-    padding: 20px;
-  }
-  #gallery-section h2{
-    font-size: var(--font-size-title-small);
-  }
-  #gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  #gallery-container img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  #gallery-container img:hover {
-    transform: scale(1.05);
-  }
-  /* Modal */
-.modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-}
-.modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
-#modal-close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 60px;
-  color: white;
-  cursor: pointer;
-  z-index: 10000;
-}
 .hidden {
   display: none !important;
 }
   /* BUENOS DESEOS */
   #wishes-section {
-    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
+    background-image: url('/images/f1.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -577,7 +573,7 @@
   
   /* ÁLBUM */
   #album-section {
-    background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+    background-image: url('/images/f2.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -623,7 +619,7 @@
   }
   /* CONFIRMACIÓN */
   #rsvp-section {
-    background-image: url('/images/siti.svg'); /* Cambia la ruta según tu imagen */
+    background-image: url('/images/f1.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -655,7 +651,7 @@
   
   /* FRASE FINAL */
   #final-message-section {
-    background-image: url('/images/bpp.svg'); /* Cambia la ruta según tu imagen */
+    background-image: url('/images/f2.svg'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

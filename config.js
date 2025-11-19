@@ -1,9 +1,9 @@
 export const eventData = {
     couple: {
-      names: "Mis Quice",
-      last:"Valentina Morán Lira",
+      names: "Mis Quince",
+      last:"Valentina",
       date: "13 . 12 . 2025",
-      heroImage: "/images/PORTADA.svg"
+      heroImage: "/images/FF.svg"
     },
     song: {
       title: "Photograph - Ed Sheeran",
