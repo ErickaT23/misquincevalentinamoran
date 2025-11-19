@@ -41,7 +41,7 @@ export const eventData = {
     },  
     album: {
       qrImage: "/images/QR.svg",
-      uploadLink: "https://drive.google.com/drive/folders/1uY_p9wq5Ixa9VTkA427kxjsexcZhLJIk?usp=drive_link",
+      uploadLink: "https://drive.google.com/drive/folders/1uY_p9wq5Ixa9VTkA427kxjsexcZhLJIk?usp=sharing",
       uploadDescription: "¡Queremos ver las fotos de la mejor fiesta! Si tienes alguna foto que quieras compartir, por favor súbela aquí. ¡Gracias!",
       hashtag: "#misquincevalentina"
     },
