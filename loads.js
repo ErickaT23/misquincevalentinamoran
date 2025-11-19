@@ -26,7 +26,7 @@ const guests = [
         : `¡${guest.name}, estás invitado!`;
   
       document.getElementById('guest-name').textContent = invitationText;
-      document.getElementById('passes').textContent = `${guest.passes} ${guest.passes === 1 ? 'pase' : 'pases'}`;
+      document.getElementById('passes').textContent = `${guest.passes} ${guest.passes === 1 ? 'persona' : 'personas'}`;
     } else {
       document.getElementById('guest-name').textContent = `¡Invitado no encontrado!`;
       const invitationInfo = document.querySelector('.invitation-info-section');
