@@ -15,7 +15,7 @@ export const eventData = {
       address: "Zona 1 Retalhuleu",
       date: "13 de Diciembre",
       time: "19:00 hrs",
-      mapLink: "https://maps.app.goo.gl/UVVW3m3RmkScoYxP6"
+      mapLink: "https://maps.app.goo.gl/9LySPeDXQCprvnhr8"
     },
     reception: {
       receptionImage:"/images/recepcion.svg",
@@ -23,16 +23,16 @@ export const eventData = {
       address: "Calzada las Palmas Retalhuelu",
       date: "13 de Diciembre",
       time: "20:00 hrs",
-      mapLink: "https://maps.app.goo.gl/43FEb8KmmDKWhGgh9"
+      mapLink: "https://maps.app.goo.gl/Xe7u17XW5xcetBEJ7"
     },
     abroadGiftMessage: "Tu presencia es nuestro mejor regalo, pero si deseas darme un obsequio tendremos un cofre donde puedes dejar tu presente en efectivo. ¡Muchas gracias!",
     giftImage: "/images/gift.svg",
     
     playlistDescription: "Nos encantaría que nos sugieras esas canciones que sabes que son geniales y no pueden en mi fiesta.",
     playlistImage: "/images/playlist.svg",
-    playlistLink: "https://open.spotify.com/playlist/11hYC8pG3jvc7UtN8Rxjw7?si=4a1702bbd0334b2c&pt=09039af2ee671260710a195ee618b33a",
+    playlistLink: "https://open.spotify.com/playlist/1KKtlxCAxjWOVJngsLpXD0?si=eq3J7G3eTtq4c4f8cQnrOg&pi=6DmEtFWbTbKmw",
     dresscode: {
-      description: "Traje formal.",
+      description: "Traje formal. Los colores rose gold y lila, quedan totalmente reservados para la quinceñera.",
       image: "/images/dresscode.svg",
       inspiration: {
         women: "https://www.pinterest.com/search/pins/?q=Vestidos%20invitadas%20de%20boda%20de%20día",

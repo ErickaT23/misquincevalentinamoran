@@ -51,8 +51,8 @@
 <!-- Sección combinada: Invitación + Cuenta regresiva + Música + Bendición -->
 <section id="intro-section" class="fade-in-element">
   <div id="marriage-announcement">
-    <h2>¡Están Invitados!</h2>
-    <p>Nos encanta que sean parte de este momento tan especial para nosotros.</p>
+    <h2>¡Solo Faltan!</h2>
+    <!--p>Nos encanta que sean parte de este momento tan especial para nosotros.</!--p>-->
   </div>
 
   <div id="countdown">
@@ -72,6 +72,10 @@
       <span id="seconds" class="number">00</span>
       <span class="label">Segundos</span>
     </div>
+  </div>
+
+  <div id="event-date">
+    <p>13 . 12 . 2025</p>
   </div>
 
   <div id="calendar-button">
@@ -98,6 +102,11 @@
 
     <!-- Itinerario Ceremonia y Recepción -->
     <section id="itinerary-section">
+
+      <div id="oracion">
+        <p>"Con gratitud a Dios y con el corazón lleno de alegría, celebramos los quince años de nuestra querida hija . Pedimos al Señor que la acompañe en este nuevo capítulo de su vida, que la llene de bendiciones, sabiduría y amor. Te invitamos a unirte a nosotros en esta celebración especial, dando gracias a Dios por cada paso que ella ha dado y por los sueños que están por venir."</p>
+      </div>
+
       <div id="ceremony">
         <img id="ceremony-image" alt="ceremony">
         <h2>Ceremonia</h2>
@@ -121,7 +130,20 @@
         <img id="gift-image" alt="gift">
       <h2>Lluvia de Sobres</h2>
       <p id="abroad-gift-message"></p>
-      <p id="abroad-gift-message"></p>
+<button id="show-account">Ver cuenta</button>
+
+<!-- Pop-up oculto -->
+<div id="account-popup" class="hidden">
+  <div class="popup-content">
+    <p><strong>Cuenta No.</strong> 1891842765</p>
+    <p><strong>Banco Industrial</strong></p>
+    <p>Monetaria</p>
+    <p>Valentina Morán Lira</p>
+    <hr>
+    <p style="margin-top: 1rem;">O bien, tendremos un cofre de sobres en la recepción.</p>
+    <button id="close-popup">Cerrar</button>
+  </div>
+</div>
     </section>
 
     <!-- Playlist -->
@@ -175,12 +197,12 @@
       <h2>Confirmación</h2>
       <p id="rsvp-message"></p>
       <button id="whatsapp-confirm">Confirmar por WhatsApp</button>
+      <section id="final-message-section">
+        <p id="final-message"></p>
+      </section>
     </section>
 
     <!-- Frase final -->
-    <section id="final-message-section">
-      <p id="final-message"></p>
-    </section>
 
     <!-- Footer -->
     <footer id="footer">

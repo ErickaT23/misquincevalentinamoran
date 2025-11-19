@@ -64,7 +64,7 @@ document.getElementById('couple-last').innerText = eventData.couple.last;
 
 //--- Botón para añadir al calendario ---
 window.addToCalendar = function () {
-  const calendarURL = "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NXU4ZjVtMmtobHNsanI3aXJnN3ZuOWlqZ20gY182OTRhZWE0ODlhN2FkZTJiYzRmYjRiNGExYTE2ZmY3ZDY2ZjAzNzFlMTgwY2I1MzZmM2M3YzE2NGUxZWMwOGIxQGc&tmsrc=c_694aea489a7ade2bc4fb4b4a1a16ff7d66f0371e180cb536f3c7c164e1ec08b1%40group.calendar.google.com";
+  const calendarURL = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+Quince+Valentina+Mor%C3%A1n+Lira&dates=20251213/20251214&details=Te+espero+para+celebrar+mis+quince+años&location=Retalhuleu%2C+Guatemala";
   window.open(calendarURL, "_blank");
 }
 
@@ -193,7 +193,7 @@ document.getElementById('footer-logo').src = eventData.footer.logo;
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
 
   sections.forEach(section => {
     observer.observe(section);
@@ -224,18 +224,15 @@ document.getElementById('footer-logo').src = eventData.footer.logo;
   }, 1000);
 
 });
-function addToCalendar() {
-    const title = encodeURIComponent('Boda de Isa & Roberto');
-    const details = encodeURIComponent('¡Acompáñanos en nuestra boda!');
-    const location = encodeURIComponent('Escuela de Cristo, Antigua Guatemala');
-    const startDate = '20260627T170000Z'; // ⚡ Importante: Formato UTC YYYYMMDDTHHMMSSZ
-    const endDate = '20260627T230000Z';   // ⚡ Final estimado
-    
-    const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}&sf=true&output=xml`;
-  
-    window.open(googleCalendarUrl, '_blank');
-  }
-  
+// Mostrar y ocultar popup de cuenta bancaria
+const popup = document.getElementById('account-popup');
+document.getElementById('show-account').addEventListener('click', () => {
+  popup.classList.remove('hidden');
+});
+
+document.getElementById('close-popup').addEventListener('click', () => {
+  popup.classList.add('hidden');
+});
 
 
   
