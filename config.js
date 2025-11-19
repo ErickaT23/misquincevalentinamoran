@@ -25,7 +25,7 @@ export const eventData = {
       time: "20:00 hrs",
       mapLink: "https://maps.app.goo.gl/Xe7u17XW5xcetBEJ7"
     },
-    abroadGiftMessage: "Tu presencia es nuestro mejor regalo, pero si deseas darme un obsequio tendremos un cofre donde puedes dejar tu presente en efectivo. ¡Muchas gracias!",
+    abroadGiftMessage: "Tu presencia es nuestro mejor regalo, pero si deseas darme un obsequio agradecer que sea un presente en efectivo. ¡Muchas gracias!",
     giftImage: "/images/gift.svg",
     
     playlistDescription: "Nos encantaría que nos sugieras esas canciones que sabes que son geniales y no pueden en mi fiesta.",
