@@ -165,7 +165,18 @@ document.getElementById('show-wishes').addEventListener('click', () => {
   // --- Confirmaciones ---
   document.getElementById('rsvp-image').src = eventData.rsvp.rsvpImage;
   document.getElementById('rsvp-message').innerText = "Para nosotros es muy importante que confirmes tu asistencia antes del 25 de noviembre, o bien indicarnos si no podrás acompañarnos.";
-  document.getElementById('whatsapp-confirm').onclick = () => window.open(eventData.rsvp.whatsapp, '_blank');
+  document.getElementById('whatsapp-confirm').onclick = () => {
+    const guestName = document.getElementById('guest-name').textContent
+      .replace('¡', '')
+      .replace(', están invitados!', '')
+      .replace(', estás invitado!', '')
+      .trim();
+  
+    const mensaje = encodeURIComponent(`Hola, soy ${guestName} y confirmo mi asistencia a los quince de Valentina.`);
+    const url = `https://wa.me/50259684301?text=${mensaje}`;
+    window.open(url, '_blank');
+  };
+  
 
   // --- Footer (redes sociales) ---
   const socialIcons = document.getElementById('social-icons');
