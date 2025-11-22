@@ -28,7 +28,7 @@ export const eventData = {
     abroadGiftMessage: "Tu presencia es nuestro mejor regalo, pero si deseas darme un obsequio agradecer que sea un presente en efectivo. ¡Muchas gracias!",
     giftImage: "/images/gift.svg",
     
-    playlistDescription: "Nos encantaría que nos sugieras esas canciones que sabes que son geniales y no pueden en mi fiesta.",
+    playlistDescription: "Nos encantaría que nos sugieras esas canciones que sabes que son geniales y no pueden faltar en mi fiesta.",
     playlistImage: "/images/playlist.svg",
     playlistLink: "https://open.spotify.com/playlist/1KKtlxCAxjWOVJngsLpXD0?si=eq3J7G3eTtq4c4f8cQnrOg&pi=6DmEtFWbTbKmw",
     dresscode: {
