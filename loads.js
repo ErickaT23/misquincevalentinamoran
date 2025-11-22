@@ -103,35 +103,44 @@ const guests = [
 ];
 
   
-  document.addEventListener("DOMContentLoaded", () => {
-  
-    function getQueryParams() {
-      const params = {};
-      const queryString = window.location.search.substring(1);
-      const pairs = queryString.split("&");
-      for (const pair of pairs) {
-        const [key, value] = pair.split("=");
-        params[decodeURIComponent(key)] = decodeURIComponent((value || '').replace(/\+/g, ' '));
-      }
-      return params;
+document.addEventListener("DOMContentLoaded", () => {
+  function getQueryParams() {
+    const params = {};
+    const queryString = window.location.search.substring(1);
+    const pairs = queryString.split("&");
+    for (const pair of pairs) {
+      const [key, value] = pair.split("=");
+      params[decodeURIComponent(key)] = decodeURIComponent((value || '').replace(/\+/g, ' '));
     }
-  
-    const queryParams = getQueryParams();
-    const guestId = queryParams.id;
-    const guest = guests.find(g => g.id === guestId);
-  
-    if (guest) {
-      const invitationText = guest.passes > 1
-        ? `¡${guest.name}, están invitados!`
-        : `¡${guest.name}, estás invitado!`;
-  
-      document.getElementById('guest-name').textContent = invitationText;
-      document.getElementById('passes').textContent = `${guest.passes} ${guest.passes === 1 ? 'persona' : 'personas'}`;
+    return params;
+  }
+
+  const queryParams = getQueryParams();
+  const guestId = queryParams.id;
+  const guest = guests.find(g => g.id === guestId);
+
+  if (guest) {
+    const isFeminine = guest.name.toLowerCase().includes("srita") || guest.name.toLowerCase().includes("hrnas") || guest.name.toLowerCase().includes("sra");
+
+    let invitationText = "";
+
+    if (guest.passes > 1) {
+      invitationText = isFeminine
+        ? `¡${guest.name}, están invitadas!`
+        : `¡${guest.name}, están invitados!`;
     } else {
-      document.getElementById('guest-name').textContent = `¡Invitado no encontrado!`;
-      const invitationInfo = document.querySelector('.invitation-info-section');
-      if (invitationInfo) invitationInfo.style.display = 'none';
+      invitationText = isFeminine
+        ? `¡${guest.name}, estás invitada!`
+        : `¡${guest.name}, estás invitado!`;
     }
-  
-  });
+
+    document.getElementById('guest-name').textContent = invitationText;
+    document.getElementById('passes').textContent = `${guest.passes} ${guest.passes === 1 ? 'persona' : 'personas'}`;
+  } else {
+    document.getElementById('guest-name').textContent = `¡Invitado no encontrado!`;
+    const invitationInfo = document.querySelector('.invitation-info-section');
+    if (invitationInfo) invitationInfo.style.display = 'none';
+  }
+});
+
   
