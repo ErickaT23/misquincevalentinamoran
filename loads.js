@@ -120,11 +120,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const guest = guests.find(g => g.id === guestId);
 
   if (guest) {
-    const isFeminine = guest.name.toLowerCase().includes("srita") || guest.name.toLowerCase().includes("hrnas") || guest.name.toLowerCase().includes("sra");
+    const nameLower = guest.name.toLowerCase();
+
+    const isSrYSra = nameLower.includes("sr.") && nameLower.includes("sra.");
+    const isFeminine =
+      nameLower.includes("srita") ||
+      nameLower.includes("hrnas") ||
+      (nameLower.includes("sra.") && guest.passes === 1);
 
     let invitationText = "";
 
-    if (guest.passes > 1) {
+    if (isSrYSra) {
+      invitationText = `¡${guest.name}, están invitados!`;
+    } else if (guest.passes > 1) {
       invitationText = isFeminine
         ? `¡${guest.name}, están invitadas!`
         : `¡${guest.name}, están invitados!`;
@@ -142,5 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (invitationInfo) invitationInfo.style.display = 'none';
   }
 });
+
 
   
